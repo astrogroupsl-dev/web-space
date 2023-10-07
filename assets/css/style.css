@@ -6,7 +6,7 @@ body {
 
 header {
   border-radius: 10px;
-  background: #000000;
+  background: linear-gradient(270deg, rgba(255, 0, 0, 0.75), rgba(0, 128, 0, 0.75), rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
   text-align: center;
   padding: 20px;
 }
@@ -20,8 +20,8 @@ p {
 }
 
 nav {
-  border-radius: 10px;
-  background: #000000;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.75), rgba(0, 128, 0, 0.75), rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
   display: flex;
   justify-content: space-between;
   align-items: center;
