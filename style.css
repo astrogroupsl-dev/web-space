@@ -1,1 +1,13 @@
-
+body {
+    font-family: Arial, sans-serif;
+}
+.post {
+    margin-bottom: 20px;
+}
+.post-title {
+    font-size: 24px;
+    color: #333;
+}
+.post-content {
+    font-size: 18px;
+}
