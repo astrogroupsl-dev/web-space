@@ -1,68 +1,65 @@
 body {
-    font-family: sans-serif;
-    background-color: #222;
-    color: #fff;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 30px;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropbtn {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .content-container {
-    padding: 20px;
-  }
-  
-  .post {
-    background-color: #333;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .post-title {
-    font-size: 24px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-  }
-  
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post {
+  width: 70%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 24px;
+}
+
+.sidebar {
+  width: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
