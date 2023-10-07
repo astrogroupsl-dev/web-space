@@ -1,10 +1,12 @@
 body {
   font-family: sans-serif;
-  background-color: #fff;
-  color: #333;
+  background: linear-gradient(45deg, #343434, #707070);
+  color: #ffffff;
 }
 
 header {
+  border-radius: 10px;
+  background: #000000;
   text-align: center;
   padding: 20px;
 }
@@ -18,10 +20,13 @@ p {
 }
 
 nav {
+  border-radius: 10px;
+  background: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  margin-top: 10px;
 }
 
 nav a {
