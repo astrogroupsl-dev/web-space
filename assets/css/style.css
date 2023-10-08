@@ -21,16 +21,6 @@ main {
   justify-content: space-between;
 }
 
-.post {
-  width: 70%;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.post-title {
-  font-size: 24px;
-}
-
 .sidebar {
   width: 30%;
   padding: 20px;
