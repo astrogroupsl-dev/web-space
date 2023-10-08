@@ -32,4 +32,6 @@ footer p {
 footer a {
   color: #fff;
   text-decoration: none;
+  text-align: center;
+  padding: 20px;
 }

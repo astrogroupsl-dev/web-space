@@ -4,39 +4,12 @@ body {
   color: #ffffff;
 }
 
-header {
-  border-radius: 10px;
-  background: linear-gradient(270deg, rgba(255, 0, 0, 0.75), rgba(0, 128, 0, 0.75), rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
-  text-align: center;
-  padding: 20px;
-}
-
 h1 {
   font-size: 40px;
 }
 
 p {
   font-size: 16px;
-}
-
-nav {
-  border-radius: 20px;
-  background: linear-gradient(90deg, rgba(255, 0, 0, 0.75), rgba(0, 128, 0, 0.75), rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-}
-
-nav a:hover {
-  color: #fff;
-  background-color: #333;
 }
 
 main {
@@ -62,9 +35,4 @@ main {
   width: 30%;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
 }
