@@ -16,11 +16,6 @@ main {
   padding: 20px;
 }
 
-.content-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .sidebar {
   width: 30%;
   padding: 20px;
