@@ -3,6 +3,8 @@ footer {
   border-radius: 15px;
   color: #fff;
   padding: 20px;
+  background-image: url('/assets/images/PS_GradientWall.png');
+  background-position: bottom;
   text-align: center;
   -webkit-backdrop-filter: 10px;
   backdrop-filter: 10px;
