@@ -1,9 +1,12 @@
 header {
     border-radius: 10px;
-    /* background: linear-gradient(270deg, rgba(255, 0, 0, 0.75), rgba(0, 128, 0, 0.75), rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75)); */
-    background-image: url('./images/PS_GradientWall.png');
-    background-position: top;
+    background: linear-gradient(270deg, rgba(255, 0, 0, 0.75), rgba(0, 128, 0, 0.75), rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
+    /* background-image: url('./images/PS_GradientWall.png');
+    background-position: top; */
     text-align: center;
     padding: 20px;
+    /* position: fixed;
+    top: 0;
+    width: 100%; */
   }
   

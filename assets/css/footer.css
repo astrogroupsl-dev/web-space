@@ -6,9 +6,9 @@ footer {
   background-image: url('/assets/images/PS_GradientWall.png');
   background-position: bottom;
   text-align: center;
-  -webkit-backdrop-filter: 10px;
-  backdrop-filter: 10px;
-
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
 }
 
 footer p {
