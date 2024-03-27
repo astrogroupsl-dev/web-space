@@ -9,6 +9,7 @@ header {
 }
 
 nav {
+    display: inline;
     text-align: center;
     top: 0;
     background-color: #0088FFFF;
