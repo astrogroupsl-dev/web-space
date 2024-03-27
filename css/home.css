@@ -10,8 +10,15 @@ header a {
     text-decoration: none;
     color: #FFFFFF;
 }
+.root {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    text-decoration: none; /* Remove underline from anchor */
+    color: inherit; /* Inherit color from parent */
+}
+
 .logo {
-    width: 75px;
+    margin-right: 10px; /* Adjust margin between logo and text */
 }
 
 nav {
