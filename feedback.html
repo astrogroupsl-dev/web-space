@@ -9,69 +9,89 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Feedback Form</h1>
-        <form action="/submit_feedback" method="post">
-            <div class="form-group">
-                <label for="name">Name: *</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email: *</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="visit">Was this your first time visiting?</label>
-                <div class="radio-buttons">
-                    <input type="radio" id="visit-yes" name="visit" value="yes">
-                    <label for="visit-yes">Yes</label>
-                    <input type="radio" id="visit-no" name="visit" value="no">
-                    <label for="visit-no">No</label>
+    <header>
+        <a class="root" href="./">
+            <img class="logo" src="./imgs/logo/v5.png" alt="logo">
+            <h1>Climate Action</h1>
+        </a>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./shop.html">Shop</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./content.html">Content</a>
+            <a href="./feedback.html">Feedback</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./editor.html">Editor</a>
+            <a href="./team.html">Team</a>
+            <a href="./sitemap.html">Sitemap</a>
+            <a href="./index.html">Splash</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Feedback Form</h1>
+            <form action="/submit_feedback" method="post">
+                <div class="form-group">
+                    <label for="name">Name: *</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="informative">Was this website informative and easy to navigate through?</label>
-                <div class="radio-buttons">
-                    <input type="radio" id="informative-yes" name="informative" value="yes">
-                    <label for="informative-yes">Yes</label>
-                    <input type="radio" id="informative-no" name="informative" value="no">
-                    <label for="informative-no">No</label>
+                <div class="form-group">
+                    <label for="email">Email: *</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="improvements">If "No", suggest any improvements for the future:</label>
-                <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="satisfaction">How satisfied are you with Our services? Choose from 0 to 10, with 1 being
-                    "Not satisfied at all!" and 10 being "Extremely satisfied!"</label>
-                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
-            </div>
-            <div class="form-group">
-                <label for="recommend">Would you recommend our services?</label>
-                <div class="radio-buttons">
-                    <input type="radio" id="recommend-yes" name="recommend" value="yes">
-                    <label for="recommend-yes">Yes</label>
-                    <input type="radio" id="recommend-no" name="recommend" value="no">
-                    <label for="recommend-no">No</label>
+                <div class="form-group">
+                    <label for="visit">Was this your first time visiting?</label>
+                    <div class="radio-buttons">
+                        <input type="radio" id="visit-yes" name="visit" value="yes">
+                        <label for="visit-yes">Yes</label>
+                        <input type="radio" id="visit-no" name="visit" value="no">
+                        <label for="visit-no">No</label>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="updates">Would you like to receive updates about the website and any offers?</label>
-                <div class="checkbox">
-                    <input type="checkbox" id="updates" name="updates" value="yes">
-                    <label for="updates">Yes-via Email</label>
+                <div class="form-group">
+                    <label for="informative">Was this website informative and easy to navigate through?</label>
+                    <div class="radio-buttons">
+                        <input type="radio" id="informative-yes" name="informative" value="yes">
+                        <label for="informative-yes">Yes</label>
+                        <input type="radio" id="informative-no" name="informative" value="no">
+                        <label for="informative-no">No</label>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="questions">Do you have any additional questions or requests?</label>
-                <textarea id="questions" name="questions" rows="4" cols="50"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
+                <div class="form-group">
+                    <label for="improvements">If "No", suggest any improvements for the future:</label>
+                    <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="satisfaction">How satisfied are you with Our services? Choose from 0 to 10, with 1 being
+                        "Not satisfied at all!" and 10 being "Extremely satisfied!"</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+                </div>
+                <div class="form-group">
+                    <label for="recommend">Would you recommend our services?</label>
+                    <div class="radio-buttons">
+                        <input type="radio" id="recommend-yes" name="recommend" value="yes">
+                        <label for="recommend-yes">Yes</label>
+                        <input type="radio" id="recommend-no" name="recommend" value="no">
+                        <label for="recommend-no">No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="updates">Would you like to receive updates about the website and any offers?</label>
+                    <div class="checkbox">
+                        <input type="checkbox" id="updates" name="updates" value="yes">
+                        <label for="updates">Yes-via Email</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="questions">Do you have any additional questions or requests?</label>
+                    <textarea id="questions" name="questions" rows="4" cols="50"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>
