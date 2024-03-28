@@ -27,17 +27,36 @@
             <a href="./index.html">Splash</a>
         </nav>
     </header>
+    <div class="full-img" id="fullImgBox">
+        <span class="close-button" onclick="closeFullImg()">X</span>
+        <img src="./imgs/1.jpg" id="fullImg">
+    </div>
+    
+    
     <div class="img-gallery">
-        <img src="./imgs/1.jpg">
-        <img src="./imgs/2.jpg">
-        <img src="./imgs/3.jpg">
-        <img src="./imgs/4.jpg">
-        <img src="./imgs/5.jpg">
+        <img src="./imgs/1.jpg" alt="cyclone" onclick="openFullImg(this.src)">
+        <img src="./imgs/2.jpg" alt="tsunami " onclick="openFullImg(this.src)">
+        <img src="./imgs/3.jpg" alt="drought" onclick="openFullImg(this.src)">
+        <img src="./imgs/4.jpg" alt="flood" onclick="openFullImg(this.src)">
+        <img src="./imgs/5.jpg" alt="wildfire" onclick="openFullImg(this.src)">
     </div>
     <footer>
         <div class="container">
             <p>&copy; 2024 Climate Action Website</p>
         </div>
     </footer>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+    
+        function openFullImg(pic) {
+            fullImgBox.style.display = "flex";
+            fullImg.src=pic;
+        }
+    
+        function closeFullImg() {
+            fullImgBox.style.display = "none";
+        }
+    </script>
 </body>
 </html>
