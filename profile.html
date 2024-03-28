@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <link rel="stylesheet" href="./css/profile.css">
+    <script src="./js/profile.js"></script>
     <style>
+        /* Add your CSS styles here */
         .step {
             display: none;
         }
-
+        
         .active {
             display: block;
         }
@@ -31,17 +34,5 @@
      <button onclick="">Next</button> 
 
 </div>
-
-
-<script>
-    function nextStep(step) {
-    document.querySelector('.active').classList.remove('active');
-    document.getElementById('step' + step).classList.add('active');
-    document.querySelector('.active').classList.remove('active');
-    document.getElementById('step' + step).classList.add('active');
-    }
-
-</script>
-
 </body>
 </html>

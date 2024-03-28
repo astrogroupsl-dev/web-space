@@ -1,9 +1,9 @@
 
-        /* Add your CSS styles here */
-        .step {
-            display: none;
-        }
+/* Add your CSS styles here */
+.step {
+    display: none;
+}
 
-        .active {
-            display: block;
-        }
+.active {
+    display: block;
+}
