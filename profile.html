@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <style>
+        .step {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    
+
+<div id="step1" class="step active">
+    <label>Your name:</label><input type="text" id="name"><br>
+    <button onclick="nextStep(2)">Next</button> 
+</div>
+
+<div id="step2" class="step">
+     <label>What brings you to this cause:</label><input type="text" id=""><br>
+     <button onclick="">Next</button> 
+</div>
+
+<div id = "step3" class = "step3">
+    <label>Main feild of study:</label><input type="text" id=""><br>
+     <button onclick="">Next</button> 
+
+</div>
+
+
+<script>
+    function nextStep(step) {
+    document.querySelector('.active').classList.remove('active');
+    document.getElementById('step' + step).classList.add('active');
+    document.querySelector('.active').classList.remove('active');
+    document.getElementById('step' + step).classList.add('active');
+    }
+
+</script>
+
 </body>
 </html>

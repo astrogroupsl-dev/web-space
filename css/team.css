@@ -39,18 +39,6 @@ main {
     width: 10%;
 }
 
-.mission a {
-    color: #0080ff;
-    text-decoration: none;
-}
-
-.mission p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
-    font-size: 20px;
-    font-weight: lighter;
-}
-
 .members {
     display: flex;
     justify-content: space-around;
