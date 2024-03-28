@@ -24,6 +24,7 @@ main {
     width: 75%;
     margin: 10px;
     z-index: 1;
+    position: relative;
 }
 
 .headings {
@@ -57,4 +58,9 @@ main {
 }
 .member img:hover {
     transform: scale(1.2);
+}
+
+.cards:hover.mission{
+    display:block;
+     
 }
