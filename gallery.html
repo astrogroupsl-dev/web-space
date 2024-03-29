@@ -10,14 +10,7 @@
 </head>
 <body>
 
-    <div class="color-scheme">
-        <div class="color-options">
-            <button class="color-option" onclick="changeBackgroundColor('#f8f8f8',)">Light</button>
-            <button class="color-option" onclick="changeBackgroundColor('#000',)">Dark</button>
-            <button class="color-option" onclick="changeBackgroundColor('#f44336',)">Red</button>
-            <button class="color-option" onclick="changeRandomColor()">Random</button>
-        </div> 
-    </div>
+
 
         <div class="container">
             <video autoplay loop muted>
@@ -28,26 +21,79 @@
                 <h1 class="heading">Welcome To The Gallery</h1>
             </div>
         </div>
-          
+        <h2>Climate Action</h2>
     </header>
     <div class="full-img" id="fullImgBox">
         <span class="close-button" onclick="closeFullImg()">X</span>
         <img src="./imgs/1.jpg" id="fullImg">
     </div>
     
-    
-    <div class="img-gallery">
+    <div class="img">
+
+        <div class="dropdown">
+          <img class="S" src="imgs/1.jpg" alt="img">
+          <div class="dropdown-content">
+              <img src="./imgs/1.jpg" alt="cyclone" onclick="openFullImg(this.src)">
+              <div class="text">
+                <h3>Sigiriya</h3>
+                <p id="text1">Sigiriya, also known as Sinhagiri, is an ancient rock fortress in the northern Matale District of Sri Lanka's Central Province, near the town of Dambulla. It is a historical and archaeological site that is dominated by a massive column of granite rock that stands approximately 180 meters (590 feet) tall. According to the ancient Sri Lankan chronicle the Cavasa, this area was once a large forest, but due to storms and landslides, it was transformed into a hill and chosen by King Kashyapa (AD 477-495) as his new capital. He built his palace on top of the rock and painted the sides with vibrant frescoes. He constructed a gateway in the shape of a massive lion on a small plateau about halfway up the side of this rock.</p>
+              </div>
+          </div>
+        </div>
+        <div class="dropdown">
+            <img class="S" src="imgs/2.jpg" alt="img">
+            <div class="dropdown-content">
+                <img src="imgs/2.jpg" alt="cyclone" onclick="openFullImg(this.src)">
+                <div class="text">
+                  <h3>Sigiriya</h3>
+                  <p id="text1">Sigiriya, also known as Sinhagiri, is an ancient rock fortress in the northern Matale District of Sri Lanka's Central Province, near the town of Dambulla. It is a historical and archaeological site that is dominated by a massive column of granite rock that stands approximately 180 meters (590 feet) tall. According to the ancient Sri Lankan chronicle the Cavasa, this area was once a large forest, but due to storms and landslides, it was transformed into a hill and chosen by King Kashyapa (AD 477-495) as his new capital. He built his palace on top of the rock and painted the sides with vibrant frescoes. He constructed a gateway in the shape of a massive lion on a small plateau about halfway up the side of this rock.</p>
+                </div>
+            </div>
+        </div>  
+
+        <div class="dropdown">
+            <img class="S" src="imgs/3.jpg" alt="img">
+            <div class="dropdown-content">
+                <img src="imgs/3.jpg" alt="cyclone" onclick="openFullImg(this.src)">
+                <div class="text">
+                  <h3>Sigiriya</h3>
+                  <p id="text1">Sigiriya, also known as Sinhagiri, is an ancient rock fortress in the northern Matale District of Sri Lanka's Central Province, near the town of Dambulla. It is a historical and archaeological site that is dominated by a massive column of granite rock that stands approximately 180 meters (590 feet) tall. According to the ancient Sri Lankan chronicle the Cavasa, this area was once a large forest, but due to storms and landslides, it was transformed into a hill and chosen by King Kashyapa (AD 477-495) as his new capital. He built his palace on top of the rock and painted the sides with vibrant frescoes. He constructed a gateway in the shape of a massive lion on a small plateau about halfway up the side of this rock.</p>
+                </div>  
+            </div>
+        </div> 
+
+        <div class="dropdown">
+            <img class="S" src="imgs/4.jpg" alt="img">
+            <div class="dropdown-content">
+                <img src="imgs/4.jpg" alt="cyclone" onclick="openFullImg(this.src)">
+                <div class="text">
+                  <h3>Sigiriya</h3>
+                  <p id="text1">Sigiriya, also known as Sinhagiri, is an ancient rock fortress in the northern Matale District of Sri Lanka's Central Province, near the town of Dambulla. It is a historical and archaeological site that is dominated by a massive column of granite rock that stands approximately 180 meters (590 feet) tall. According to the ancient Sri Lankan chronicle the Cavasa, this area was once a large forest, but due to storms and landslides, it was transformed into a hill and chosen by King Kashyapa (AD 477-495) as his new capital. He built his palace on top of the rock and painted the sides with vibrant frescoes. He constructed a gateway in the shape of a massive lion on a small plateau about halfway up the side of this rock.</p>
+                </div>
+            </div>   
+        </div>
+
+        <div class="dropdown">
+            <img class="S" src="imgs/5.jpg" alt="img">
+            <div class="dropdown-content">
+                <img src="imgs/5.jpg" alt="cyclone" onclick="openFullImg(this.src)">
+                <div class="text">
+                  <h3>Sigiriya</h3>
+                  <p id="text1">Sigiriya, also known as Sinhagiri, is an ancient rock fortress in the northern Matale District of Sri Lanka's Central Province, near the town of Dambulla. It is a historical and archaeological site that is dominated by a massive column of granite rock that stands approximately 180 meters (590 feet) tall. According to the ancient Sri Lankan chronicle the Cavasa, this area was once a large forest, but due to storms and landslides, it was transformed into a hill and chosen by King Kashyapa (AD 477-495) as his new capital. He built his palace on top of the rock and painted the sides with vibrant frescoes. He constructed a gateway in the shape of a massive lion on a small plateau about halfway up the side of this rock.</p>
+                </div>
+                
+        
+            </div>
+        </div>    
+    </div>        
+    <!-- <div class="img-gallery">
         <img src="./imgs/1.jpg" alt="cyclone" onclick="openFullImg(this.src)">
         <img src="./imgs/2.jpg" alt="tsunami " onclick="openFullImg(this.src)">
         <img src="./imgs/3.jpg" alt="drought" onclick="openFullImg(this.src)">
         <img src="./imgs/4.jpg" alt="flood" onclick="openFullImg(this.src)">
         <img src="./imgs/5.jpg" alt="wildfire" onclick="openFullImg(this.src)">
-    </div>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Climate Action Website</p>
-        </div>
-    </footer>
+    </div> -->
+
     <script>
         var fullImgBox = document.getElementById("fullImgBox");
         var fullImg = document.getElementById("fullImg");
