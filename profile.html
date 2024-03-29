@@ -8,14 +8,14 @@
             display: flex;
         }
 
-        .box,
+        .first,
         .step {
             flex: 1;
             padding: 20px;
-            box-sizing: border-box;
+            box-sizing: border-first;
         }
 
-        .box {
+        .first {
             background-color: #f0f0f0;
         }
 
@@ -30,40 +30,76 @@
 </head>
 <body>
     <main>
-        <div class="box">
+        <div class="first">
             <p>BUILD YOUR PROFILE</p>
-        </div>
-        <div class="step" id="step1">
-            <p>STEP 1.1<br>Personal details</p>
-            <label for="name">Your name: </label>
-            <input type="text" id="name" placeholder="Enter your name">
-            <button type="button" onclick="nextStep('step1')">Next</button>
-            <button type="button" onclick="skipStep('step1')">Skip</button>
-        </div>
+        
+            <div class="step" id="step1">
+                <p>STEP 1.1<br>Personal details</p>
+                <label for="name">Your name: </label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <button type="button" onclick="nextStep('step1')">Next</button>
+                <button type="button" onclick="skipStep('step1')">Skip</button>
+            </div>
 
-        <div class="step hidden" id="step2">
-            <p>STEP 1.2<br>Surname details</p>
-            <label for="surname">Your surname: </label>
-            <input type="text" id="surname" placeholder="Enter your surname">
-            <button type="button" onclick="nextStep('step2')">Next</button>
-            <button type="button" onclick="skipStep('step2')">Skip</button>
-        </div>
+            <div class="step hidden" id="step2">
+                <p>STEP 1.2<br>Surname details</p>
+                <label for="surname">Your surname: </label>
+                <input type="text" id="surname" placeholder="Enter your surname">
+                <button type="button" onclick="nextStep('step2')">Next</button>
+                <button type="button" onclick="skipStep('step2')">Skip</button>
+            </div>
 
-        <div class="step hidden" id="step3">
-            <p>STEP 1.3<br>Age details</p>
-            <label for="Age">Your Age: </label>
-            <input type="text" id="Age" placeholder="Enter your age">
-            <button type="button" onclick="nextStep('step3')">Next</button>
-            <button type="button" onclick="skipStep('step3')">Skip</button>
-        </div>
+            <div class="step hidden" id="step3">
+                <p>STEP 1.3<br>Age details</p>
+                <label for="Age">Your Age: </label>
+                <input type="text" id="Age" placeholder="Enter your age">
+                <button type="button" onclick="nextStep('step3')">Next</button>
+                <button type="button" onclick="skipStep('step3')">Skip</button>
+            </div>
 
-        <div class="step hidden" id="step4">
-            <p>STEP 1.3<br>Age details</p>
-            <label for="gender">Your Gender: </label>
-            <input type="text" id="gender" placeholder="Enter your gender">
-            <button type="button" onclick="nextStep('step4')">Next</button>
-            <button type="button" onclick="skipStep('step4')">Skip</button>
+            <div class="step hidden" id="step4">
+                <p>STEP 1.3<br>Age details</p>
+                <label for="gender">Your Gender: </label>
+                <input type="text" id="gender" placeholder="Enter your gender">
+                <button type="button" onclick="nextStep('step4')">Next</button>
+                <button type="button" onclick="skipStep('step4')">Skip</button>
+            </div>
         </div>
+        <div class = "second">
+            <p>VOLUNTEERING TASK</p>
+            <div class="step" id="step2.1">
+                <p>STEP 2.1<br>Rational details</p>
+                <label for="name">Rational: </label>
+                <input type="text" id="name" placeholder="Rational details">
+                <button type="button" onclick="nextStep('step2.1')">Next</button>
+                <button type="button" onclick="skipStep('step2.1')">Skip</button>
+            </div>
+
+            <div class="step hidden" id="step2">
+                <p>STEP 1.2<br>Surname details</p>
+                <label for="surname">Your surname: </label>
+                <input type="text" id="surname" placeholder="Enter your surname">
+                <button type="button" onclick="nextStep('step2')">Next</button>
+                <button type="button" onclick="skipStep('step2')">Skip</button>
+            </div>
+
+            <div class="step hidden" id="step3">
+                <p>STEP 1.3<br>Age details</p>
+                <label for="Age">Your Age: </label>
+                <input type="text" id="Age" placeholder="Enter your age">
+                <button type="button" onclick="nextStep('step3')">Next</button>
+                <button type="button" onclick="skipStep('step3')">Skip</button>
+            </div>
+
+            <div class="step hidden" id="step4">
+                <p>STEP 1.3<br>Age details</p>
+                <label for="gender">Your Gender: </label>
+                <input type="text" id="gender" placeholder="Enter your gender">
+                <button type="button" onclick="nextStep('step4')">Next</button>
+                <button type="button" onclick="skipStep('step4')">Skip</button>
+            </div>
+        </div>
+        
         
     </main>
 
