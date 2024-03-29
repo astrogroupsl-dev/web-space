@@ -80,6 +80,7 @@ main {
 .member:hover p {
     opacity: 1;
 }
+<<<<<<< HEAD
 
 .cards:hover.mission {
     display: block;
