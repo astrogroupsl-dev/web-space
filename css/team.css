@@ -14,12 +14,11 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 100px;
 }
-.cards img{
-    width: 100%
-    height auto
-    border auto
-    padding 5px
+
+.cards img {
+    width: 100% height auto border auto padding 5px
 }
 
 .cards {
@@ -40,7 +39,7 @@ main {
 
 
 .members {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -50,7 +49,7 @@ main {
     margin: 10px;
     position: relative;
     display: inline;
-    margin:  5px;
+    margin: 5px;
 }
 
 .member img {
@@ -58,27 +57,31 @@ main {
     border-radius: 50%;
     transition: transform 125ms ease-in-out;
 }
+
 .member:hover img {
     transform: scale(1.2);
 }
+
 .member p {
     position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8); 
-            color: #fff;
-            padding: 5px;
-            font-size: 14px;
-            text-align: center;
-            width: 100%;
-            opacity: 0; 
-            transition: opacity 0.3s ease;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
-.member:hover p{
+
+.member:hover p {
     opacity: 1;
 }
-.cards:hover.mission{
-    display:block;
+
+.cards:hover.mission {
+    display: block;
 
 }
