@@ -1,20 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/profile.css">
-    <script src="./js/profile.js"></script>
-    <title>User Profile</title>
+    <title>Sample</title>
+    <style>
+        main {
+            display: flex;
+        }
+
+        .box,
+        .step {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            background-color: #f0f0f0;
+        }
+
+        .step {
+            background-color: #e0e0e0;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div class = "user_profile">
-        <h2>---USER PROFILE DETAILS---</h2>
-        <form id = "profile_form">
-            <div id = "1st_step">
-                <label for="name">Enter your surname</label>
-            </div>
-        </form>
-    </div>
+    <main>
+        <div class="box">
+            <p>BUILD YOUR PROFILE</p>
+        </div>
+        <div class="step" id="step1">
+            <p>STEP 1.1<br>Personal details</p>
+            <label for="name">Your name: </label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <button type="button" onclick="nextStep('step1')">Next</button>
+            <button type="button" onclick="skipStep('step1')">Skip</button>
+        </div>
+
+        <div class="step hidden" id="step2">
+            <p>STEP 1.2<br>Surname details</p>
+            <label for="surname">Your surname: </label>
+            <input type="text" id="surname" placeholder="Enter your surname">
+            <button type="button" onclick="nextStep('step2')">Next</button>
+            <button type="button" onclick="skipStep('step2')">Skip</button>
+        </div>
+
+        <div class="step hidden" id="step2">
+            <p>STEP 1.3<br>Age details</p>
+            <label for="Age">Your Age: </label>
+            <input type="text" id="Age" placeholder="Enter your age">
+            <button type="button" onclick="nextStep('step2')">Next</button>
+            <button type="button" onclick="skipStep('step2')">Skip</button>
+        </div>
+    </main>
+
+    <script>
+        function nextStep(currentStepId) {
+            var name = document.getElementById("name").value; // Get the value of the input field
+
+            // Hide the current step
+            document.getElementById(currentStepId).classList.add("hidden");
+
+            // Show the next step
+            var nextStepId = getNextStepId(currentStepId);
+            document.getElementById(nextStepId).classList.remove("hidden");
+        }
+
+        function skipStep(currentStepId) {
+            // Hide the current step
+            document.getElementById(currentStepId).classList.add("hidden");
+
+            // Show the next step
+            var nextStepId = getNextStepId(currentStepId);
+            document.getElementById(nextStepId).classList.remove("hidden");
+        }
+
+        function getNextStepId(currentStepId) {
+            // Extract the numeric part of the current step ID
+            var currentStepNumber = parseInt(currentStepId.replace("step", ""));
+
+            // Calculate the ID of the next step
+            var nextStepNumber = currentStepNumber + 1;
+            var nextStepId = "step" + nextStepNumber;
+
+            return nextStepId;
+        }
+    </script>
 </body>
 </html>
