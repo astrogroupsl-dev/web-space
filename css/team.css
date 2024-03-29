@@ -78,7 +78,3 @@ main {
 .member:hover p{
     opacity: 1;
 }
-.cards:hover.mission{
-    display:block;
-
-}
