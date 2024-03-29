@@ -1,110 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteering Form</title>
     <style>
-        main {
-            display: flex;
+        body {
+            font-family: Arial, sans-serif;
         }
 
-        .box,
-        .step {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .box {
-            background-color: #f0f0f0;
+        .container {
+            width: 400px;
+            margin: 50px auto;
         }
 
         .step {
-            background-color: #e0e0e0;
-        }
-
-        .hidden {
             display: none;
         }
     </style>
 </head>
+
 <body>
-    <main>
-        <div class="box">
-            <p>BUILD YOUR PROFILE</p>
-        </div>
+
+    <div class="container">
+        <button onclick="start()">Start</button>
         <div class="step" id="step1">
-            <p>STEP 1.1<br>Personal details</p>
-            <label for="name">Your name: </label>
-            <input type="text" id="name" placeholder="Enter your name">
-            <button type="button" onclick="nextStep('step1')">Next</button>
-            <button type="button" onclick="skipStep('step1')">Skip</button>
+            <h2>Step 1: Personal Information</h2>
+            <input type="text" id="nameInput" placeholder="Enter Name" oninput="checkNext(1)"><br><br>
+            <input type="text" id="surnameInput" placeholder="Enter Surname" oninput="checkNext(1)"><br><br>
+            <input type="text" id="ageInput" placeholder="Enter Age" oninput="checkNext(1)"><br><br>
+            <input type="text" id="genderInput" placeholder="Enter Gender" oninput="checkNext(1)"><br><br>
+            <button onclick="goToStep2()" id="step1Next" disabled>Next</button>
+            <button onclick="skipStep(1)">Skip</button>
         </div>
-
-        <div class="step hidden" id="step2">
-            <p>STEP 1.2<br>Surname details</p>
-            <label for="surname">Your surname: </label>
-            <input type="text" id="surname" placeholder="Enter your surname">
-            <button type="button" onclick="nextStep('step2')">Next</button>
-            <button type="button" onclick="skipStep('step2')">Skip</button>
+        <div class="step" id="step2">
+            <h2>Step 2: Volunteering Details</h2>
+            <input type="text" id="rationalInput" placeholder="Enter Rational" oninput="checkNext(2)"><br><br>
+            <input type="text" id="doaInput" placeholder="Enter Date of Availability" oninput="checkNext(2)"><br><br>
+            <input type="text" id="taskInput" placeholder="Enter Task" oninput="checkNext(2)"><br><br>
+            <input type="text" id="placeInput" placeholder="Enter Place" oninput="checkNext(2)"><br><br>
+            <button onclick="goToStep3()" id="step2Next" disabled>Next</button>
+            <button onclick="skipStep(2)">Skip</button>
         </div>
-
-        <div class="step hidden" id="step3">
-            <p>STEP 1.3<br>Age details</p>
-            <label for="Age">Your Age: </label>
-            <input type="text" id="Age" placeholder="Enter your age">
-            <button type="button" onclick="nextStep('step3')">Next</button>
-            <button type="button" onclick="skipStep('step3')">Skip</button>
+        <div class="step" id="step3">
+            <h2>Qualifications</h2>
+            <input type="text" id="area" placeholder="Enter area" oninput="checkNext(3)"><br><br>
+            <input type="text" id="degree" placeholder="Enter the degree" oninput="checkNext(3)"><br><br>
+            <input type="text" id="university" placeholder="Enter the university" oninput="checkNext(3)"><br><br>
+            <input type="text" id="year" placeholder="Enter the year" oninput="checkNext(3)"><br><br>
+            <input type="text" id="country" placeholder="Enter country" oninput="checkNext(3)"><br><br>
+            <button onclick="goToStep4()" id="step3Next" disabled>Next</button>
+            <button onclick="skipStep(3)">Skip</button>
         </div>
-
-        <div class="step hidden" id="step4">
-            <p>STEP 1.3<br>Age details</p>
-            <label for="gender">Your Gender: </label>
-            <input type="text" id="gender" placeholder="Enter your gender">
-            <button type="button" onclick="nextStep('step4')">Next</button>
-            <button type="button" onclick="skipStep('step4')">Skip</button>
+        <div class="step" id="step4">
+            <h2>Confirmation</h2>
+            <div id="result"></div>
         </div>
-        
-    </main>
+    </div>
 
     <script>
-        function nextStep(currentStepId) {
-            var name = document.getElementById("name").value; // Get the value of the input field
+        let userData = {
+            name: '',
+            surname: '',
+            age: '',
+            gender: '',
+            rational: '',
+            doa: '',
+            task: '',
+            place: '',
+            area: '',
+            degree: '',
+            university: '',
+            year: '',
+            country: '',
+        };
 
-            // Hide the current step
-            document.getElementById(currentStepId).classList.add("hidden");
-
-            // Show the next step
-            var nextStepId = getNextStepId(currentStepId);
-            document.getElementById(nextStepId).classList.remove("hidden");
-
-            
+        function start() {
+            document.getElementById('step1').style.display = 'block';
         }
 
-        function skipStep(currentStepId) {
-            // Hide the current step
-            document.getElementById(currentStepId).classList.add("hidden");
-
-            // Show the next step
-            var nextStepId = getNextStepId(currentStepId);
-            document.getElementById(nextStepId).classList.remove("hidden");
-
-            // If this is the last step, display the summary
-            
+        function enableNextButton(step) {
+            const allInputs = document.querySelectorAll(`#step${step} input`);
+            let allFilled = true;
+            allInputs.forEach(input => {
+                if (input.value === '') {
+                    allFilled = false;
+                }
+            });
+            document.getElementById(`step${step}Next`).disabled = !allFilled;
         }
 
-        function getNextStepId(currentStepId) {
-            // Extract the numeric part of the current step ID
-            var currentStepNumber = parseInt(currentStepId.replace("step", ""));
-
-            // Calculate the ID of the next step
-            var nextStepNumber = currentStepNumber + 1;
-            var nextStepId = "step" + nextStepNumber;
-
-            return nextStepId;
+        function checkNext(step) {
+            enableNextButton(step);
         }
 
-        
+        function goToStep2() {
+            userData.name = document.getElementById('nameInput').value;
+            userData.surname = document.getElementById('surnameInput').value;
+            userData.age = document.getElementById('ageInput').value;
+            userData.gender = document.getElementById('genderInput').value;
+
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+        }
+
+        function goToStep3() {
+            userData.rational = document.getElementById('rationalInput').value;
+            userData.doa = document.getElementById('doaInput').value;
+            userData.task = document.getElementById('taskInput').value;
+            userData.place = document.getElementById('placeInput').value;
+
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'block';
+        }
+
+        function goToStep4() {
+            userData.area = document.getElementById('area').value;
+            userData.degree = document.getElementById('degree').value;
+            userData.university = document.getElementById('university').value;
+            userData.year = document.getElementById('year').value;
+            userData.country = document.getElementById('country').value;
+
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('step4').style.display = 'block';
+            displayConfirmation(); // Call displayConfirmation function here
+        }
+
+        function skipStep(step) {
+            document.getElementById(`step${step}`).style.display = 'none';
+            if (step < 4) {
+                document.getElementById(`step${step + 1}`).style.display = 'block';
+                enableNextButton(step + 1);
+                if (step + 1 === 4) {
+                    displayConfirmation(); // Call displayConfirmation when skipping to Step 4
+                }
+            } else {
+                displayConfirmation();
+            }
+        }
+
+        function displayConfirmation() {
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <p><strong>Name:</strong> ${userData.name}</p>
+                <p><strong>Surname:</strong> ${userData.surname}</p>
+                <p><strong>Age:</strong> ${userData.age}</p>
+                <p><strong>Gender:</strong> ${userData.gender}</p>
+                <p><strong>Rationale:</strong> ${userData.rational}</p>
+                <p><strong>Date of Availability:</strong> ${userData.doa}</p>
+                <p><strong>Task:</strong> ${userData.task}</p>
+                <p><strong>Place:</strong> ${userData.place}</p>
+                <p><strong>Area:</strong> ${userData.area}</p>
+                <p><strong>Degree:</strong> ${userData.degree}</p>
+                <p><strong>University:</strong> ${userData.university}</p>
+                <p><strong>Year:</strong> ${userData.year}</p>
+                <p><strong>Country:</strong> ${userData.country}</p>
+            `;
+        }
     </script>
+
 </body>
+
 </html>
