@@ -1,7 +1,82 @@
-body {}
-header {}
-main {}
-.title {}
-.members {}
-.loader {}
-footer {}
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f; /* Dark grey background color */
+    color: #ddd; /* Light grey text color */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #111; /* Dark black header background color */
+    color: #ddd; /* Light grey text color */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header p {
+    font-size: 24px;
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 20px;
+  }
+  
+  .mission {
+    background-color: #222; /* Slightly lighter black background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Add a subtle white shadow effect */
+  }
+  
+  .mission p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .members {
+    margin-top: 20px;
+  }
+  
+  .members table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .members th, .members td {
+    padding: 10px;
+    border-bottom: 1px solid #444; /* Dark grey bottom border */
+  }
+  
+  .members th {
+    text-align: left;
+    background-color: #111; /* Dark black table header background color */
+  }
+  
+  .members td {
+    font-size: 14px;
+  }
+  
+  /* Loader Styles */
+  .loader {
+    border: 8px solid #111; /* Dark black border */
+    border-top: 8px solid #bbb; /* Light grey border on top */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* Add a spinning animation */
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
