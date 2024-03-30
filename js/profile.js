@@ -70,7 +70,7 @@ function skipStep(step) {
     if (step < 4) {
         document.getElementById(`step${step + 1}`).style.display = 'block';
         enableNextButton(step + 1);
-        if (step + 1 === 4) {
+        if (step + 1 == 4) {
             displayConfirmation(); // Call displayConfirmation when skipping to Step 4
         }
     } else {
