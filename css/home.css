@@ -5,66 +5,6 @@ body {
     padding: 0;
 }
 
-header {
-    color: white;
-    padding: 10px;
-    background-color: #000000;
-    position: fixed;
-    /* Set header to fixed position */
-    width: 100%;
-    /* Take full width */
-    top: 0;
-    /* Stick to the top */
-    z-index: 1000;
-}
-
-header a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.root {
-    display: flex;
-    align-items: center;
-    /* Align items vertically */
-    text-decoration: none;
-    /* Remove underline from anchor */
-    color: inherit;
-    /* Inherit color from parent */
-}
-
-.root img {
-    width: 75px;
-}
-
-.logo {
-    margin-right: 10px;
-    /* Adjust margin between logo and text */
-    justify-content: left;
-    padding-bottom: 10px;
-}
-
-nav {
-    padding: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-nav a {
-    text-decoration: none;
-    color: #FFFFFF;
-    padding: 5px;
-    transition-duration: 250ms;
-}
-
-nav a:hover {
-    background-color: #FFFFFF;
-    color: #000000;
-    transition-duration: 250ms;
-}
-
 main {
     background-color: #FFFFFF;
 }
