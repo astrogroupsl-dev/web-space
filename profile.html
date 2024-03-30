@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteering Form</title>
+    <title>User profile</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +13,7 @@
         .container {
             width: 400px;
             margin: 50px auto;
+            box-sizing: border-box;
         }
 
         .step {
@@ -22,6 +23,14 @@
             font-size: 80px; 
             align-items: center;
         }
+        .form-box {
+    border: 1px solid #ccc;
+    padding: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
         
 
     </style>
@@ -30,51 +39,53 @@
 <body>
 
     <div class="container">
+        <div class="form-box">
         <button onclick="start()" class="start-button">Start</button>
-        <div class="step" id="step1">
-            <h2>Step 1: Personal Information</h2>
-            <label>Enter your name: </label>
-            <input type="text" id="nameInput" placeholder="Enter Name" oninput="checkNext(1)"><br><br>
-            <label>Enter your surname: </label>
-            <input type="text" id="surnameInput" placeholder="Enter Surname" oninput="checkNext(1)"><br><br>
-            <label>Enter your age: </label>
-            <input type="text" id="ageInput" placeholder="Enter Age" oninput="checkNext(1)"><br><br>
-            <label>Enter your gender: </label>
-            <input type="text" id="genderInput" placeholder="Enter Gender" oninput="checkNext(1)"><br><br>
-            <button onclick="goToStep2()" id="step1Next" disabled>Next</button>
-            <button onclick="skipStep(1)">Skip</button>
-        </div>
-        <div class="step" id="step2">
-            <h2>Step 2: Volunteering Details</h2>
-            <label>Rational: </label>
-            <input type="text" id="rationalInput" placeholder="Enter Rational" oninput="checkNext(2)"><br><br>
-            <label>Enter your Doa: </label>
-            <input type="text" id="doaInput" placeholder="Enter Date of Availability" oninput="checkNext(2)"><br><br>
-            <label>Enter your task: </label>
-            <input type="text" id="taskInput" placeholder="Enter Task" oninput="checkNext(2)"><br><br>
-            <label>Enter your place: </label>
-            <input type="text" id="placeInput" placeholder="Enter Place" oninput="checkNext(2)"><br><br>
-            <button onclick="goToStep3()" id="step2Next" disabled>Next</button>
-            <button onclick="skipStep(2)">Skip</button>
-        </div>
-        <div class="step" id="step3">
-            <h2>Qualifications</h2>
-            <label>Area of study: </label>
-            <input type="text" id="area" placeholder="Enter area" oninput="checkNext(3)"><br><br>
-            <label>Heighest degree: </label>
-            <input type="text" id="degree" placeholder="Enter the degree" oninput="checkNext(3)"><br><br>
-            <label>University: </label>
-            <input type="text" id="university" placeholder="Enter the university" oninput="checkNext(3)"><br><br>
-            <label>Enter the year: </label>
-            <input type="text" id="year" placeholder="Enter the year" oninput="checkNext(3)"><br><br>
-            <label>The country: </label>
-            <input type="text" id="country" placeholder="Enter country" oninput="checkNext(3)"><br><br>
-            <button onclick="goToStep4()" id="step3Next" disabled>Next</button>
-            <button onclick="skipStep(3)">Skip</button>
-        </div>
-        <div class="step" id="step4">
-            <h2>Confirmation</h2>
-            <div id="result"></div>
+            <div class="step" id="step1">
+                <h2>Step 1: Personal Information</h2>
+                <label>Enter your name: </label>
+                <input type="text" id="nameInput" placeholder="Enter Name" oninput="checkNext(1)"><br><br>
+                <label>Enter your surname: </label>
+                <input type="text" id="surnameInput" placeholder="Enter Surname" oninput="checkNext(1)"><br><br>
+                <label>Enter your age: </label>
+                <input type="text" id="ageInput" placeholder="Enter Age" oninput="checkNext(1)"><br><br>
+                <label>Enter your gender: </label>
+                <input type="text" id="genderInput" placeholder="Enter Gender" oninput="checkNext(1)"><br><br>
+                <button onclick="goToStep2()" id="step1Next" disabled>Next</button>
+                <button onclick="skipStep(1)">Skip</button>
+            </div>  
+            <div class="step" id="step2">
+                <h2>Step 2: Volunteering Details</h2>
+                <label>Rational: </label>
+                <input type="text" id="rationalInput" placeholder="Enter Rational" oninput="checkNext(2)"><br><br>
+                <label>Enter your Doa: </label>
+                <input type="text" id="doaInput" placeholder="Enter Date of Availability" oninput="checkNext(2)"><br><br>
+                <label>Enter your task: </label>
+                <input type="text" id="taskInput" placeholder="Enter Task" oninput="checkNext(2)"><br><br>
+                <label>Enter your place: </label>
+                <input type="text" id="placeInput" placeholder="Enter Place" oninput="checkNext(2)"><br><br>
+                <button onclick="goToStep3()" id="step2Next" disabled>Next</button>
+                <button onclick="skipStep(2)">Skip</button>
+            </div>
+            <div class="step" id="step3">
+                <h2>Qualifications</h2>
+                <label>Area of study: </label>
+                <input type="text" id="area" placeholder="Enter area" oninput="checkNext(3)"><br><br>
+                <label>Heighest degree: </label>
+                <input type="text" id="degree" placeholder="Enter the degree" oninput="checkNext(3)"><br><br>
+                <label>University: </label>
+                <input type="text" id="university" placeholder="Enter the university" oninput="checkNext(3)"><br><br>
+                <label>Enter the year: </label>
+                <input type="text" id="year" placeholder="Enter the year" oninput="checkNext(3)"><br><br>
+                <label>The country: </label>
+                <input type="text" id="country" placeholder="Enter country" oninput="checkNext(3)"><br><br>
+                <button onclick="goToStep4()" id="step3Next" disabled>Next</button>
+                <button onclick="skipStep(3)">Skip</button>
+            </div>
+            <div class="step" id="step4">
+                <h2>Confirmation</h2>
+                <div id="result"></div>
+            </div>
         </div>
     </div>
 
