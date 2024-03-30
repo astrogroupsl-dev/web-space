@@ -1,3 +1,17 @@
+body {
+    margin: 0;
+    padding: 0; 
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 main {
     margin-top: 100px;
 }
@@ -10,12 +24,12 @@ main {
 }
 
 .content-box {
-    width: 25%; /* Adjust the width as needed */
+    width: 25%;
     margin: 20px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #d5eefd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;
 }
@@ -24,10 +38,15 @@ main {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: black;
 }
 
 .box-description {
     font-size: 16px;
     line-height: 1.5;
-    color: #555;
+    color: #312268;
+}
+
+.Read {
+    color: black;
 }

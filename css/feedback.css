@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 main {
-  padding-top: 70px; /* Adjust this value as needed */
+  padding-top: 100px; /* Adjust this value as needed */
   
 }
 
@@ -69,6 +69,7 @@ main {
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 
 h1 {
