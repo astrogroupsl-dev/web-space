@@ -3,6 +3,10 @@ body {
     padding: 0; 
 }
 
+main {
+    margin-top: 100px;
+}
+
 .background-image {
     position: fixed;
     top: 0;
@@ -10,10 +14,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-
-main {
-    margin-top: 100px;
 }
 
 .content-container {
@@ -32,6 +32,12 @@ main {
     background-color: #d5eefd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-box img {
+    border-radius: 5px;
 }
 
 .box-title {
@@ -42,9 +48,13 @@ main {
 }
 
 .box-description {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
     font-size: 16px;
     line-height: 1.5;
     color: #312268;
+    box-shadow: inset 0 0 10px #00000044;
 }
 
 .Read {
@@ -52,5 +62,5 @@ main {
 }
 
 .con-img {
-    width: 375px;
+    width: 100%;
 }

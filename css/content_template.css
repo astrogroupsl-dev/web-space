@@ -1,9 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
     padding: 20px;
-    background-color: #000000;
+    background-image: url("../imgs/contentpage/banner2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 main {
