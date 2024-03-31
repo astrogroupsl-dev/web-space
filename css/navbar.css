@@ -51,3 +51,8 @@ nav a:hover {
     left: 0;
     z-index: 100;
 }
+.icon-link img {
+    width: 40px;
+    height: auto;
+    margin-top: -10px;
+}

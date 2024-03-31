@@ -86,6 +86,11 @@ p {
     /* Change border color on hover */
 }
 
+.content-head{
+    color: white;
+    text-align: center;
+}
+
 .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +127,12 @@ p {
     height: auto;
     display: block;
     margin-bottom: 10px;
+}
+.read-more-button {
+    display: block;
+    margin-top: 10px; /* Adjust the margin as needed */
+    cursor: pointer;
+    text-align: center;
 }
 
 footer {
