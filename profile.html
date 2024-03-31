@@ -126,63 +126,63 @@
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step5">
-            <h2>Step 5: Volunteering Details</h2>
+            <h2>Step 2: Volunteering Details</h2>
             <label>Rational: </label><br><br>
             <input type="text" id="rationalInput" placeholder="Enter Rational">
             <button onclick="goToDoA()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step6">
-            <h2>Step 6: Volunteering Details</h2>
+            <h2>Step 2: Volunteering Details</h2>
             <label>Doa: </label><br><br>
             <input type="text" id="doaInput" placeholder="Enter Date of Availability">
             <button onclick="goToTask()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step7">
-            <h2>Step 7: Volunteering Details</h2>
+            <h2>Step 2: Volunteering Details</h2>
             <label>Task: </label><br><br>
             <input type="text" id="taskInput" placeholder="Enter Task">
             <button onclick="goToPlace()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step8">
-            <h2>Step 8: Volunteering Details</h2>
+            <h2>Step 2: Volunteering Details</h2>
             <label>Place: </label><br><br>
             <input type="text" id="placeInput" placeholder="Enter Place">
             <button onclick="goTotype()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step9">
-            <h2>Step 9: Volunteering Details</h2>
+            <h2>Step 2: Volunteering Details</h2>
             <label>Assignment type: </label><br><br>
             <input type="text" id="typeInput" placeholder="Enter assignment type">
             <button onclick="goToStep3()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step10">
-            <h2>Step 10: Qualifications</h2>
+            <h2>Step 3: Qualifications</h2>
             <label>Area study: </label><br><br>
             <input type="text" id="areaInput" placeholder="Enter the area">
             <button onclick="goTodegree()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step11">
-            <h2>Step 11: Qualifications</h2>
+            <h2>Step 3: Qualifications</h2>
             <label>Heighest degree: </label><br><br>
             <input type="text" id="degreeInput" placeholder="Enter degree">
             <button onclick="goTouniversity()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step12">
-            <h2>Step 12: Qualifications</h2>
+            <h2>Step 3: Qualifications</h2>
             <label>University/Institution: </label><br><br>
             <input type="text" id="uniInput" placeholder="Enter university">
             <button onclick="goToyear()">Next</button>
             <button onclick="skipStep()">Skip</button>
         </div>
         <div class="step" id="step13">
-            <h2>Step 13: Qualifications</h2>
+            <h2>Step 3: Qualifications</h2>
             <label>Complition year: </label><br><br>
             <input type="text" id="yearInput" placeholder="Enter year">
             <button onclick="goTocountry()">Next</button>
@@ -190,7 +190,7 @@
         </div>
 
         <div class="step" id="step13">
-            <h2>Step 13: Qualifications</h2>
+            <h2>Step 3: Qualifications</h2>
             <label>Country: </label><br><br>
             <input type="text" id="countryInput" placeholder="Enter country">
             <button onclick="goToStep4()">Next</button>
@@ -265,117 +265,57 @@ function goToGender() {
 }
 
 function goToStep2() {
-    let genderInput = document.getElementById('genderInput').value;
-    if (genderInput.trim() !== "") {
-        userData.age = genderInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your gender.");
-    }
+    userData.gender = document.getElementById('genderInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 
 function goToDoA() {
-    let rationalInput = document.getElementById('rationalInput').value;
-    if (rationalInput.trim() !== "") {
-        userData.age = rationalInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your rational.");
-    }
+    userData.rational = document.getElementById('rationalInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 
 function goToTask() {
-    let doaInput = document.getElementById('doaInput').value;
-    if (doaInput.trim() !== "") {
-        userData.age = doaInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your doa.");
-    }
+    userData.doa = document.getElementById('doaInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 
 function goToPlace() {
-    let taskInput = document.getElementById('taskInput').value;
-    if (taskInput.trim() !== "") {
-        userData.age = taskInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your tasks.");
-    }
+    userData.task = document.getElementById('taskInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 function goTotype() {
-    let placeInput = document.getElementById('placeInput').value;
-    if (placeInput.trim() !== "") {
-        userData.age = placeInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your place.");
-    }
+    userData.task = document.getElementById('placeInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 function goToStep3() {
-    let typeInput = document.getElementById('typeInput').value;
-    if (typeInput.trim() !== "") {
-        userData.age = typeInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your assesment type.");
-    }
-}
-function goToarea() {
-    let areaInput = document.getElementById('areaInput').value;
-    if (areaInput.trim() !== "") {
-        userData.area = areaInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your area.");
-    }
+    userData.task = document.getElementById('typeInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 function goTodegree() {
-    let degreeInput = document.getElementById('degreeInput').value;
-    if (degreeInput.trim() !== "") {
-        userData.age = degreeInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your degree type.");
-    }
+    userData.task = document.getElementById('areaInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 function goTouniversity() {
-    let uniInput = document.getElementById('uniInput').value;
-    if (uniInput.trim() !== "") {
-        userData.age = uniInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your university.");
-    }
+    userData.task = document.getElementById('degreeInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 function goToyear() {
-    let yearInput = document.getElementById('yearInput').value;
-    if (yearInput.trim() !== "") {
-        userData.age = yearInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your year.");
-    }
+    userData.task = document.getElementById('uniInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 function goTocountry() {
-    let countryInput = document.getElementById('countryInput').value;
-    if (countryInput.trim() !== "") {
-        userData.age = countryInput;
-        currentStep++;
-        showStep(currentStep);
-    } else {
-        alert("Please enter your country.");
-    }
+    userData.task = document.getElementById('yearInput').value;
+    currentStep++;
+    showStep(currentStep);
 }
 
 
