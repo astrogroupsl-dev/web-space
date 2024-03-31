@@ -29,117 +29,126 @@
             margin: 20px auto;
             width: 80%;
         }
+
+        .box-a {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <button onclick="start()">Start</button>
-        <div class="step" id="step1">
-            <h2>Step 1: Personal Information</h2>
-            <label>Enter your name: </label><br><br>
-            <input type="text" id="nameInput" placeholder="Enter Name">
-            <button onclick="goToSurname()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step2">
-            <h2>Step 1: Personal Information</h2>
-            <label>Enter your surname: </label><br><br>
-            <input type="text" id="surnameInput" placeholder="Enter Surname">
-            <button onclick="goToAge()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step3">
-            <h2>Step 1: Personal Information</h2>
-            <label>Enter your age: </label><br><br>
-            <input type="text" id="ageInput" placeholder="Enter Age">
-            <button onclick="goToGender()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step4">
-            <h2>Step 1: Personal Information</h2>
-            <label>Enter the gender: </label><br><br>
-            <input type="text" id="genderInput" placeholder="Enter Gender">
-            <button onclick="goToStep2()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step5">
-            <h2>Step 2: Volunteering Details</h2>
-            <label>Rationale: </label><br><br>
-            <input type="text" id="rationaleInput" placeholder="Enter Rationale">
-            <button onclick="goToDateOfAvailability()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step6">
-            <h2>Step 2: Volunteering Details</h2>
-            <label>Date of Availability: </label><br><br>
-            <input type="text" id="doaInput" placeholder="Enter Date of Availability">
-            <button onclick="goToTask()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step7">
-            <h2>Step 2: Volunteering Details</h2>
-            <label>Task: </label><br><br>
-            <input type="text" id="taskInput" placeholder="Enter Task">
-            <button onclick="goToPlace()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step8">
-            <h2>Step 2: Volunteering Details</h2>
-            <label>Place: </label><br><br>
-            <input type="text" id="placeInput" placeholder="Enter Place">
-            <button onclick="goToAssignmentType()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step9">
-            <h2>Step 2: Volunteering Details</h2>
-            <label>Assignment Type: </label><br><br>
-            <input type="text" id="assignmentTypeInput" placeholder="Enter Assignment Type">
-            <button onclick="goToAssignmentType()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
+    <div class="box-a"> <!-- Box A -->
+        <div class="container">
+            <button onclick="start()">Start</button>
+            <div class="step" id="step1">
+                <h2>Step 1: Personal Information</h2>
+                <label>Enter your name: </label><br><br>
+                <input type="text" id="nameInput" placeholder="Enter Name">
+                <button onclick="goToSurname()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step2">
+                <h2>Step 1: Personal Information</h2>
+                <label>Enter your surname: </label><br><br>
+                <input type="text" id="surnameInput" placeholder="Enter Surname">
+                <button onclick="goToAge()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step3">
+                <h2>Step 1: Personal Information</h2>
+                <label>Enter your age: </label><br><br>
+                <input type="text" id="ageInput" placeholder="Enter Age">
+                <button onclick="goToGender()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step4">
+                <h2>Step 1: Personal Information</h2>
+                <label>Enter the gender: </label><br><br>
+                <input type="text" id="genderInput" placeholder="Enter Gender">
+                <button onclick="goToStep2()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step5">
+                <h2>Step 2: Volunteering Details</h2>
+                <label>Rationale: </label><br><br>
+                <input type="text" id="rationaleInput" placeholder="Enter Rationale">
+                <button onclick="goToDateOfAvailability()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step6">
+                <h2>Step 2: Volunteering Details</h2>
+                <label>Date of Availability: </label><br><br>
+                <input type="text" id="doaInput" placeholder="Enter Date of Availability">
+                <button onclick="goToTask()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step7">
+                <h2>Step 2: Volunteering Details</h2>
+                <label>Task: </label><br><br>
+                <input type="text" id="taskInput" placeholder="Enter Task">
+                <button onclick="goToPlace()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step8">
+                <h2>Step 2: Volunteering Details</h2>
+                <label>Place: </label><br><br>
+                <input type="text" id="placeInput" placeholder="Enter Place">
+                <button onclick="goToAssignmentType()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step9">
+                <h2>Step 2: Volunteering Details</h2>
+                <label>Assignment Type: </label><br><br>
+                <input type="text" id="assignmentTypeInput" placeholder="Enter Assignment Type">
+                <button onclick="goToQualifications()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
 
-        <div class="step" id="step10">
-            <h2>Step 3: Qualifications</h2>
-            <label>Area of Study: </label><br><br>
-            <input type="text" id="areaInput" placeholder="Enter Area of Study">
-            <button onclick="goToDegree()">Next</button>
-            <button onclick="skipStep()">Skip</button>
+            <div class="step" id="step10">
+                <h2>Step 3: Qualifications</h2>
+                <label>Area of Study: </label><br><br>
+                <input type="text" id="areaInput" placeholder="Enter Area of Study">
+                <button onclick="goToDegree()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step11">
+                <h2>Step 3: Qualifications</h2>
+                <label>Highest Degree: </label><br><br>
+                <input type="text" id="degreeInput" placeholder="Enter Highest Degree">
+                <button onclick="goToUniversity()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step12">
+                <h2>Step 3: Qualifications</h2>
+                <label>University/Institution: </label><br><br>
+                <input type="text" id="uniInput" placeholder="Enter University/Institution">
+                <button onclick="goToCompletionYear()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step13">
+                <h2>Step 3: Qualifications</h2>
+                <label>Completion Year: </label><br><br>
+                <input type="text" id="yearInput" placeholder="Enter Completion Year">
+                <button onclick="goToCountry()">Next</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step14">
+                <h2>Step 3: Qualifications</h2>
+                <label>Country: </label><br><br>
+                <input type="text" id="countryInput" placeholder="Enter Country">
+                <button onclick="submitForm()">Submit</button>
+                <button onclick="skipStep()">Skip</button>
+            </div>
+            <div class="step" id="step15">
+                <h2>Confirmation</h2>
+                <div id="userDetails"></div>
+            </div>
         </div>
-        <div class="step" id="step11">
-            <h2>Step 3: Qualifications</h2>
-            <label>Highest Degree: </label><br><br>
-            <input type="text" id="degreeInput" placeholder="Enter Highest Degree">
-            <button onclick="goToUniversity()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step12">
-            <h2>Step 3: Qualifications</h2>
-            <label>University/Institution: </label><br><br>
-            <input type="text" id="uniInput" placeholder="Enter University/Institution">
-            <button onclick="goToCompletionYear()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step13">
-            <h2>Step 3: Qualifications</h2>
-            <label>Completion Year: </label><br><br>
-            <input type="text" id="yearInput" placeholder="Enter Completion Year">
-            <button onclick="goToCountry()">Next</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step14">
-            <h2>Step 3: Qualifications</h2>
-            <label>Country: </label><br><br>
-            <input type="text" id="countryInput" placeholder="Enter Country">
-            <button onclick="submitForm()">Submit</button>
-            <button onclick="skipStep()">Skip</button>
-        </div>
-        <div class="step" id="step15">
-            <h2>Confirmation</h2>
-            <div id="userDetails"></div>
-        </div>
-    </div>
+    </div> <!-- End Box A -->
 
     <script>
         let userData = {
@@ -240,6 +249,18 @@
         }
 
         function goToDateOfAvailability() {
+            let rationaleInput = document.getElementById('rationaleInput').value.trim();
+            if (rationaleInput !== "") {
+                userData.rationale = rationaleInput;
+                appendToDetails('Rationale', userData.rationale);
+                currentStep++;
+                showStep(currentStep);
+            } else {
+                alert("Please enter your rationale.");
+            }
+        }
+
+        function goToTask() {
             let doaInput = document.getElementById('doaInput').value.trim();
             if (doaInput !== "") {
                 userData.doa = doaInput;
@@ -251,7 +272,7 @@
             }
         }
 
-        function goToTask() {
+        function goToPlace() {
             let taskInput = document.getElementById('taskInput').value.trim();
             if (taskInput !== "") {
                 userData.task = taskInput;
@@ -263,7 +284,7 @@
             }
         }
 
-        function goToPlace() {
+        function goToAssignmentType() {
             let placeInput = document.getElementById('placeInput').value.trim();
             if (placeInput !== "") {
                 userData.place = placeInput;
@@ -275,7 +296,7 @@
             }
         }
 
-        function goToAssignmentType() {
+        function goToQualifications() {
             let assignmentTypeInput = document.getElementById('assignmentTypeInput').value.trim();
             if (assignmentTypeInput !== "") {
                 userData.assignmentType = assignmentTypeInput;
@@ -287,18 +308,12 @@
             }
         }
 
-
-        function goToQualifications() {
-            currentStep = 10; // Skip to qualifications section
-            showStep(currentStep);
-        }
-
         function goToDegree() {
             let areaInput = document.getElementById('areaInput').value.trim();
             if (areaInput !== "") {
                 userData.areaOfStudy = areaInput;
                 appendToDetails('Area of Study', userData.areaOfStudy);
-                currentStep += 2; // Skip to the degree step
+                currentStep++;
                 showStep(currentStep);
             } else {
                 alert("Please enter the area of study.");
