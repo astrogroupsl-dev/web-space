@@ -8,11 +8,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url('background-image.jpg'); /* Add your background image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
-            width: 400px;
-            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .step {
@@ -23,18 +37,40 @@
             display: block;
         }
 
-        #userDetails {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
+        label {
+            font-weight: bold;
         }
 
-        .box-a {
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        #userDetails {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
