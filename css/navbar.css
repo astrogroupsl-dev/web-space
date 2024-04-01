@@ -1,9 +1,10 @@
+/* Page Reset */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* Navigation bar behavior */
 .nav-header {
     background-color: #000000;
     color: #FFFFFF;
@@ -40,7 +41,7 @@ body {
 
 .nav-header nav a:hover {
     color: #000000;
-    background-color: #FFFFFF;
+    background-color: #FFFFFFCC;
 }
 
 .navbar-iframe {
@@ -53,14 +54,35 @@ body {
     z-index: 100;
 }
 
-.user-link img {
+/* Icon Section */
+.home-link img,
+.content-link img,
+.feedback-link img,
+.gallery-link img,
+.shop-link img {
+    display: none;
+    width: 20px;
+    height: auto;
+    margin-top: -10px;
+}
+
+.profile-link img {
     width: 40px;
     height: auto;
     margin-top: -10px;
     transition: transform 0.3s ease;
 }
 
-.user-link img:hover {
-    content: url("../imgs/userpropic/user-circle-solid-240.png");
-    transform: scale(1.1);
+.home-link img:hover,
+.content-link img:hover,
+.feedback-link img:hover,
+.gallery-link img:hover,
+.shop-link img:hover {
+    display: block;
+    transition: 0.5s ease;
+    transition-duration: 0.3s;
+}
+
+.profile-link img:hover {
+    content: url("../imgs/navbar/user-circle-solid-240.png");
 }
