@@ -8,6 +8,7 @@ body {
     background-image: url('../imgs/sitemap\ .jpg'); /* Adjusted path to your background image */
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 h1{
