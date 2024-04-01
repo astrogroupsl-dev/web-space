@@ -3,43 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-    <link rel="stylesheet" href="./css/shop.css">
+    <link rel="stylesheet" type="text/css" href="./css/shop.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <script src="./js/shop.js"></script>
+    <title>Shop</title>
 </head>
 <body>
     <header>
         <iframe class="navbar-iframe" src="./navbar.html" frameborder="0"></iframe>
+        <h1>Climate Action Donation Cards</h1>
     </header>
     <main>
-        <section id="donation-options">
-            <h2>Choose a Cause to Donate</h2>
-            <div class="cause">
-                <h3>Climate Action</h3>
-                <p>Description of the cause related to climate action.</p>
-                <button onclick="donate('climate')">Donate</button>
+        <!-- Donation Card Showcase -->
+        <section id="donation-card-showcase">
+            <!-- Card 1 -->
+            <div class="donation-card">
+                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
+                <h2>Donation Card Title 1</h2>
+                <p>Donation Card Description 1</p>
+                <p>Donation Amount 1</p>
+                <!-- Donation Options -->
+                <select>
+                    <option value="10">$10 Donation</option>
+                    <option value="20">$20 Donation</option>
+                    <option value="50">$50 Donation</option>
+                </select>
+                <button>Add to Cart</button>
             </div>
-            <div class="cause">
-                <h3>Gender Equality</h3>
-                <p>Description of the cause related to gender equality.</p>
-                <button onclick="donate('gender')">Donate</button>
+            <!-- Card 2 -->
+            <div class="donation-card">
+                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
+                <h2>Donation Card Title 2</h2>
+                <p>Donation Card Description 2</p>
+                <p>Donation Amount 2</p>
+                <!-- Donation Options -->
+                <select>
+                    <option value="10">$10 Donation</option>
+                    <option value="20">$20 Donation</option>
+                    <option value="50">$50 Donation</option>
+                </select>
+                <button>Add to Cart</button>
             </div>
-            <!-- Add more causes as needed -->
+            <!-- Card 3 -->
+            <div class="donation-card">
+                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
+                <h2>Donation Card Title 3</h2>
+                <p>Donation Card Description 3</p>
+                <p>Donation Amount 3</p>
+                <!-- Donation Options -->
+                <select>
+                    <option value="10">$10 Donation</option>
+                    <option value="20">$20 Donation</option>
+                    <option value="50">$50 Donation</option>
+                </select>
+                <button>Add to Cart</button>
+            </div>
         </section>
-        
-        <section id="donation-form">
-            <h2>Make a Donation</h2>
-            <form id="donation">
-                <label for="amount">Amount ($)</label>
-                <input type="number" id="amount" name="amount" min="1" required>
-                <button type="submit">Donate Now</button>
-            </form>
+        <!-- Order Summary -->
+        <section id="order-summary">
+            <!-- List of selected donation cards will go here -->
+        </section>
+        <!-- Checkout Summary -->
+        <section id="checkout-summary">
+            <!-- Checkout form will go here -->
         </section>
     </main>
-    
     <footer>
-        <p>&copy; 2024 Donate for UN Sustainability Goals</p>
+        <!-- Add your footer here -->
     </footer>
 </body>
 </html>
