@@ -9,14 +9,16 @@ body {
 h1 {
   padding: 40px;
   text-align: center;
-  font-size: 48px;
+  font-size: 70px;
   margin-top: 100px;
 }
 
 .sitemap {
-  margin: 40px auto; /* Center the sitemap vertically */
-  max-width: 800px; /* Limit the width of the sitemap */
-  margin-left: 120px; /* Move the sitemap 20px to the left */
+  position: fixed;
+  left: 50%; /* Set the left position to the center */
+  top: 50%; /* Set the top position to the center */
+  transform: translate(-50%, -50%); /* Translate to center based on its own width and height */
+  padding-left: 0;
 }
 
 
