@@ -4,6 +4,11 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+main {
+    margin-top: 128px;
+}
+
 /* Navigation bar behavior */
 .nav-header {
     background-color: #000000;
@@ -15,7 +20,7 @@ body {
     box-sizing: border-box;
 }
 
-.root {
+.home-link-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -35,13 +40,14 @@ body {
     margin-left: 50px;
     border-radius: 5px;
     color: #FFFFFF;
+    text-align: center;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .nav-header nav a:hover {
     color: #000000;
-    background-color: #FFFFFFCC;
+    background-color: #FFFFFF88;
 }
 
 .navbar-iframe {
@@ -60,10 +66,11 @@ body {
 .feedback-link img,
 .gallery-link img,
 .shop-link img {
-    display: none;
+    display: inline;
     width: 20px;
     height: auto;
-    margin-top: -10px;
+    margin-right: 10px;
+    transition: visibility 0.3s, transform 0.3s ease-in-out;
 }
 
 .profile-link img {
@@ -73,14 +80,14 @@ body {
     transition: transform 0.3s ease;
 }
 
-.home-link img:hover,
-.content-link img:hover,
-.feedback-link img:hover,
-.gallery-link img:hover,
-.shop-link img:hover {
-    display: block;
-    transition: 0.5s ease;
-    transition-duration: 0.3s;
+.home-link:hover img,
+.content-link:hover img,
+.feedback-link:hover img,
+.gallery-link:hover img,
+.shop-link:hover img {
+    display: inline-block;
+    visibility: visible;
+    transform: scale(1.1) translateX(-10px);
 }
 
 .profile-link img:hover {
