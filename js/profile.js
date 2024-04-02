@@ -3,96 +3,238 @@ let userData = {
     surname: '',
     age: '',
     gender: '',
-    rational: '',
+    rationale: '',
     doa: '',
     task: '',
     place: '',
-    area: '',
+    assignmentType: '',
+    areaOfStudy: '',
     degree: '',
     university: '',
-    year: '',
-    country: '',
+    completionYear: '',
+    country: ''
 };
 
-function start() {
-    document.getElementById('step1').style.display = 'block';
-}
+let currentStep = 1;
 
-function enableNextButton(step) {
-    const allInputs = document.querySelectorAll(`#step${step} input`);
-    let allFilled = true;
-    allInputs.forEach(input => {
-        if (input.value === '') {
-            allFilled = false;
-        }
-    });
-    document.getElementById(`step${step}Next`).disabled = !allFilled;
-}
-
-function checkNext(step) {
-    enableNextButton(step);
-}
-
-function goToStep2() {
-    userData.name = document.getElementById('nameInput').value;
-    userData.surname = document.getElementById('surnameInput').value;
-    userData.age = document.getElementById('ageInput').value;
-    userData.gender = document.getElementById('genderInput').value;
-
-    document.getElementById('step1').style.display = 'none';
-    document.getElementById('step2').style.display = 'block';
-}
-
-function goToStep3() {
-    userData.rational = document.getElementById('rationalInput').value;
-    userData.doa = document.getElementById('doaInput').value;
-    userData.task = document.getElementById('taskInput').value;
-    userData.place = document.getElementById('placeInput').value;
-
-    document.getElementById('step2').style.display = 'none';
-    document.getElementById('step3').style.display = 'block';
-}
-
-function goToStep4() {
-    userData.area = document.getElementById('area').value;
-    userData.degree = document.getElementById('degree').value;
-    userData.university = document.getElementById('university').value;
-    userData.year = document.getElementById('year').value;
-    userData.country = document.getElementById('country').value;
-
-    document.getElementById('step3').style.display = 'none';
-    document.getElementById('step4').style.display = 'block';
-    displayConfirmation(); // Call displayConfirmation function here
-}
-
-function skipStep(step) {
-    document.getElementById(`step${step}`).style.display = 'none';
-    if (step < 4) {
-        document.getElementById(`step${step + 1}`).style.display = 'block';
-        enableNextButton(step + 1);
-        if (step + 1 == 4) {
-            displayConfirmation(); // Call displayConfirmation when skipping to Step 4
-        }
+function showStartMessage() {
+    if (currentStep === 1) {
+        document.getElementById('startMessage').style.display = 'block';
     } else {
-        displayConfirmation();
+        document.getElementById('startMessage').style.display = 'none';
     }
 }
 
-function displayConfirmation() {
-    let resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `
-        <p><strong>Name:</strong> ${userData.name}</p>
-        <p><strong>Surname:</strong> ${userData.surname}</p>
-        <p><strong>Age:</strong> ${userData.age}</p>
-        <p><strong>Gender:</strong> ${userData.gender}</p>
-        <p><strong>Rationale:</strong> ${userData.rational}</p>
-        <p><strong>Date of Availability:</strong> ${userData.doa}</p>
-        <p><strong>Task:</strong> ${userData.task}</p>
-        <p><strong>Place:</strong> ${userData.place}</p>
-        <p><strong>Area:</strong> ${userData.area}</p>
-        <p><strong>Degree:</strong> ${userData.degree}</p>
-        <p><strong>University:</strong> ${userData.university}</p>
-        <p><strong>Year:</strong> ${userData.year}</p>
-        <p><strong>Country:</strong> ${userData.country}</p>
-    `;
+
+showStartMessage();
+
+function showStartButton() {
+    document.getElementById('startButton').style.display = 'block';
+}
+
+showStartButton();
+
+function start() {
+    document.getElementById('startButton').style.display = 'none';
+    document.getElementById('startMessage').style.display = 'none';
+    showStep(currentStep);
+}
+
+function showStep(step) {
+    document.querySelectorAll('.step').forEach(step => {
+        step.classList.remove('active');
+    });
+    document.getElementById(`step${step}`).classList.add('active');
+}
+
+function appendToDetails(key, value) {
+    let userDetails = document.getElementById('userDetails');
+    let detailItem = document.createElement('p');
+    detailItem.innerHTML = `<strong>${key}:</strong> ${value}`;
+    userDetails.appendChild(detailItem);
+}
+
+function goToSurname() {
+    let nameInput = document.getElementById('nameInput').value.trim();
+    if (nameInput !== "") {
+        userData.name = nameInput;
+        appendToDetails('Name', userData.name);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter your name.");
+    }
+}
+
+function goToAge() {
+    let surnameInput = document.getElementById('surnameInput').value.trim();
+    if (surnameInput !== "") {
+        userData.surname = surnameInput;
+        appendToDetails('Surname', userData.surname);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter your surname.");
+    }
+}
+
+function goToGender() {
+    let ageInput = document.getElementById('ageInput').value.trim();
+    if (ageInput !== "" && !isNaN(ageInput)) {
+        userData.age = ageInput;
+        appendToDetails('Age', userData.age);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter a valid age.");
+    }
+}
+
+function goToStep2() {
+    let genderInput = document.getElementById('genderInput').value.trim();
+    if (genderInput !== "") {
+        userData.gender = genderInput;
+        appendToDetails('Gender', userData.gender);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please select your gender.");
+    }
+}
+
+
+function goToRationale() {
+    let rationaleInput = document.getElementById('rationaleInput').value.trim();
+    if (rationaleInput !== "") {
+        userData.rationale = rationaleInput;
+        appendToDetails('Rationale', userData.rationale);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter your rationale.");
+    }
+}
+
+function goToDateOfAvailability() {
+    let rationaleInput = document.getElementById('rationaleInput').value.trim();
+    if (rationaleInput !== "") {
+        userData.rationale = rationaleInput;
+        appendToDetails('Rationale', userData.rationale);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter your rationale.");
+    }
+}
+
+function goToTask() {
+    let doaInput = document.getElementById('doaInput').value.trim();
+    if (doaInput !== "") {
+        userData.doa = doaInput;
+        appendToDetails('Date of Availability', userData.doa);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the date of availability.");
+    }
+}
+
+function goToPlace() {
+    let taskInput = document.getElementById('taskInput').value.trim();
+    if (taskInput !== "") {
+        userData.task = taskInput;
+        appendToDetails('Task', userData.task);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the task.");
+    }
+}
+
+function goToAssignmentType() {
+    let placeInput = document.getElementById('placeInput').value.trim();
+    if (placeInput !== "") {
+        userData.place = placeInput;
+        appendToDetails('Place', userData.place);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the place.");
+    }
+}
+
+function goToQualifications() {
+    let assignmentTypeInput = document.getElementById('assignmentTypeInput').value.trim();
+    if (assignmentTypeInput !== "") {
+        userData.assignmentType = assignmentTypeInput;
+        appendToDetails('Assignment Type', userData.assignmentType);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the assignment type.");
+    }
+}
+
+function goToDegree() {
+    let areaInput = document.getElementById('areaInput').value.trim();
+    if (areaInput !== "") {
+        userData.areaOfStudy = areaInput;
+        appendToDetails('Area of Study', userData.areaOfStudy);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the area of study.");
+    }
+}
+
+function goToUniversity() {
+    let degreeInput = document.getElementById('degreeInput').value.trim();
+    if (degreeInput !== "") {
+        userData.degree = degreeInput;
+        appendToDetails('Degree', userData.degree);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the degree.");
+    }
+}
+
+function goToCompletionYear() {
+    let uniInput = document.getElementById('uniInput').value.trim();
+    if (uniInput !== "") {
+        userData.university = uniInput;
+        appendToDetails('University/Institution', userData.university);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the university/institution.");
+    }
+}
+
+function goToCountry() {
+    let yearInput = document.getElementById('yearInput').value.trim();
+    if (yearInput !== "") {
+        userData.completionYear = yearInput;
+        appendToDetails('Completion Year', userData.completionYear);
+        currentStep++;
+        showStep(currentStep);
+    } else {
+        alert("Please enter the completion year.");
+    }
+}
+
+function submitForm() {
+    let countryInput = document.getElementById('countryInput').value.trim();
+    if (countryInput !== "") {
+        userData.country = countryInput;
+        appendToDetails('Country', userData.country);
+        showStep(15); // Confirmation step
+    } else {
+        alert("Please enter the country.");
+    }
+}
+
+function skipStep() {
+    currentStep++;
+    showStep(currentStep);
 }

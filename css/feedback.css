@@ -1,21 +1,3 @@
-header {
-  color: white;
-  padding: 10px;
-  background-color: #000000;
-  position: fixed;
-  /* Set header to fixed position */
-  width: 100%;
-  /* Take full width */
-  top: 0;
-  /* Stick to the top */
-  z-index: 1000;
-}
-
-header a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
 .root {
   display: flex;
   align-items: center;
@@ -62,8 +44,14 @@ body{
 }
 
 main {
-  padding-top: 100px; /* Adjust this value as needed */
-  
+  padding-top: 120px; 
+  padding-bottom: 20px;
+}
+
+.back-img{
+  opacity: .5;
+  position: fixed;
+  z-index: -1;
 }
 
 /* Inside style.css */
@@ -71,7 +59,7 @@ main {
   background-color: rgb(230, 242, 253);
   width: 500px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }

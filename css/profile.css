@@ -1,68 +1,86 @@
-body {
+body main{
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  padding: 20px;
-  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  background-image: url('background-image.jpg'); /* Add your background image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-message {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.start-message p {
+  margin: 0;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 120px;
-  background-color: #fff;
+  width: 400px; /* Set a fixed width for the container */
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the content inside the container */
 }
 
-.form-box {
-  border: 1px solid #ccc;
-  padding: 100px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 550px;
-}
 
 .step {
   display: none;
-  margin-bottom: 20px;
 }
 
-.start-button {
-  font-size: 80px; 
-  align-items: center;
-}
-
-h2 {
-  color: #444;
-  margin-bottom: 10px;
+.active {
+  display: block;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input[type="text"] {
-  width: 100%;
+  width: calc(100% - 20px); /* Adjusted width to consider padding */
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Prevents the input from expanding beyond specified width */
 }
 
 button {
   padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
   border: none;
   border-radius: 5px;
-  background-color: #444;
-  color: #fff;
   cursor: pointer;
+  margin-right: 10px;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+button:hover {
+  background-color: #45a049;
+}
+
+.button-container {
+  margin-top: 30px; /* Adjust the margin-top value as needed */
+}
+
+
+h2 {
+  margin-top: 0;
+}
+
+#userDetails {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+#startButton {
+  margin-left: 160px; /* Adjust margin as needed */
 }
