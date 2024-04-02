@@ -1,14 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 .footer-nav {
     text-align: center;
-    background-color: #343434;
+    background-color: #171717;
     color: #FFFFFF;
     padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .footer-content a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-    margin-left: 20px;
+    margin-left: 40px;
     display: inline-block;
     text-decoration: none;
     color: #f0f8ff;
@@ -28,8 +37,4 @@
     width: 100%;
     border: none;
     overflow: hidden;
-    position: block;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
 }
