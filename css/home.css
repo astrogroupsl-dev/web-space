@@ -20,6 +20,7 @@ main {
 video {
     width: 100%;
     height: auto;
+    margin-top: -40px;
     filter: brightness(50%);
 }
 
