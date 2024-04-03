@@ -25,7 +25,7 @@
                 </a>
                 <p class="card-description">Pay community men and women to plant 30,000 trees (65 species) in biological corridors covering water springs and rivers in Guabo Valley watershed near Pacific ocean. All farms owned by Costa Ricans. Build sustainable businesses like production of fertile soil, production of trees, sustainable eco-tourism and forest management practices promoting long term rainforest conservation. Combat climate change thru permanent capture 30,000 tons of CO2. Excess water vapor transpiration. Repair soils.</p>
                 <input type="number" name="" id="donation-amount-1" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" id="add-to-cart-1" class="donation-card-input-button">
+                <input type="button" value="Add to Cart" id="add-to-cart-1" onclick="addToCart(1, document.getElementById('donation-amount-1').value)" class="donation-card-input-button">
             </div>
             <!-- Card 2 -->
             <div class="donation-card" id="donation-card-2">
@@ -35,7 +35,7 @@
                 </a>
                 <p class="card-description">Rainforest Rescue's Daintree Purchase and Protect Forever Project purchases and protects high conservation value rainforest. Nature Refuge status is then created which protects the properties forever. Our vision is to buy back and protect all remaining high conservation value properties in the Daintree lowland rainforest while supporting rainforest buy back projects globally. Your support will enable us to protect the most rare and diverse tropical rainforest forever.</p>
                 <input type="number" name="" id="donation-amount-2" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" id="add-to-cart-2" class="donation-card-input-button">
+                <input type="button" value="Add to Cart" id="add-to-cart-2" onclick="addToCart(2, document.getElementById('donation-amount-2').value)" class="donation-card-input-button">
             </div>
             <!-- Card 3 -->
             <div class="donation-card" id="donation-card-3">
@@ -45,14 +45,14 @@
                 </a>
                 <p class="card-description">EESI is a nonpartisan policy institution. It fills critical needs: turning complex concepts into accessible information, inviting decision-makers to ask questions, and finding solutions to climate change, an urgent threat. Help further equitable climate policy solutions that lead to economic, national security, public health, and environmental benefits. Give today so that the Congress--and the media--have access to compelling stories to move ahead on clean energy, climate, and resilience!</p>
                 <input type="number" name="" id="donation-amount-3" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" id="add-to-cart-3" class="donation-card-input-button">
+                <input type="button" value="Add to Cart" id="add-to-cart-3" onclick="addToCart(3, document.getElementById('donation-amount-3').value)" class="donation-card-input-button">
             </div>
         </section>
         <!-- Cart Container -->
         <div id="cartContainer"">
             <button id="toggleCart-button" onclick="toggleCart()">Show Cart</button>
             <div id="cart">
-                <p>Cart Content</p>
+                <p>Your cart is empty.</p>
             </div>
         </div>
     </main>

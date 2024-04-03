@@ -40,13 +40,17 @@ function updateCartDisplay() {
 }
 
 function toggleCart() {
+    var cartContainer = document.getElementById("cartContainer");
     var cart = document.getElementById("cart");
     var toggleButton = document.getElementById("toggleCart-button");
+
     if (cart.style.display === "none") {
         cart.style.display = "block";
+        cartContainer.style.width = "auto";
         toggleButton.innerHTML = "Close Cart";
     } else {
         cart.style.display = "none";
+        cartContainer.style.width = "fit-content";
         toggleButton.innerHTML = "Show Cart";
     }
 }

@@ -103,16 +103,14 @@ main {
 #cartContainer {
   background-color: #eee;
   border-radius: 10px;
+  width: fit-content;
   margin-bottom: 10px;
+  float: right;
 }
 
 #cart {
   display: none;
-  border: solid 1px;
+  border: none;
   border-radius: 5px;
   padding: 10px;
-}
-
-#cart.active {
-  display: block;
 }
