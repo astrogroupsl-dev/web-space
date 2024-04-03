@@ -2,36 +2,28 @@
 var cartItems = [];
 
 function addToCart(cardId, amount) {
-    // Find the donation card element
     var card = document.getElementById("donation-card-" + cardId);
-    
-    // Create a new cart item object
     var newItem = {
         id: cardId,
         title: card.querySelector(".card-title").innerText,
         amount: amount
     };
-    
-    // Add the item to the cartItems array
     cartItems.push(newItem);
-    
-    // Update the cart display
     updateCartDisplay();
 }
 
 function updateCartDisplay() {
     var cartContainer = document.getElementById("cart");
-    
-    // Clear the cart container
+    var cleanCartButton = document.getElementById("clearCart-button");
+    var checkoutCartButton = document.getElementById("checkoutCart-button");
+
     cartContainer.innerHTML = "";
-    
-    // Check if there are items in the cart
     if (cartItems.length === 0) {
         cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        cleanCartButton.style.display = "none";
+        checkoutCartButton.style.display = "none";
     } else {
-        // Loop through each item in the cartItems array
         cartItems.forEach(function(item) {
-            // Create HTML elements for displaying the item
             var itemElement = document.createElement("div");
             itemElement.innerHTML = "<p><strong>" + item.title + "</strong> - Amount: $" + item.amount + "</p>";
             cartContainer.appendChild(itemElement);
@@ -39,18 +31,40 @@ function updateCartDisplay() {
     }
 }
 
+function clearCart() {
+    cartItems = [];
+    updateCartDisplay();
+}
+
+function checkoutCart() {
+    window.location.href = "./checkout.html";
+}
+
 function toggleCart() {
     var cartContainer = document.getElementById("cartContainer");
     var cart = document.getElementById("cart");
     var toggleButton = document.getElementById("toggleCart-button");
+    var cleanCartButton = document.getElementById("clearCart-button");
+    var checkoutCartButton = document.getElementById("checkoutCart-button");
 
     if (cart.style.display === "none") {
         cart.style.display = "block";
         cartContainer.style.width = "auto";
+        cartContainer.style.backgroundColor = "#ffffffff";
         toggleButton.innerHTML = "Close Cart";
+        if (cartItems.length > 0) {
+            cleanCartButton.style.display = "block";
+            checkoutCartButton.style.display = "block";
+        }
+
     } else {
         cart.style.display = "none";
         cartContainer.style.width = "fit-content";
+        cartContainer.style.backgroundColor = "#ffffff00";
         toggleButton.innerHTML = "Show Cart";
+        if (cartItems.length == 0) {
+            cleanCartButton.style.display = "none";
+            checkoutCartButton.style.display = "none";
+        }
     }
 }
