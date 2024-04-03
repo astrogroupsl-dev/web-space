@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/shop.css">
+    <script src="./js/shop.js"></script>
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="icon" type="image/x-icon" href="./imgs\logo\v5.png">
@@ -12,79 +13,47 @@
 <body>
     <header>
         <iframe class="navbar-iframe" src="./navbar.html" frameborder="0"></iframe>
-        <h1>Climate Action Donation Cards</h1>
     </header>
     <main>
+        <!-- Cart Button -->
+        <button id="cart-button">View Cart</button>
         <!-- Donation Card Showcase -->
         <section id="donation-card-showcase">
             <!-- Card 1 -->
             <div class="donation-card">
-                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
-                <h2>Donation Card Title 1</h2>
-                <p>Donation Card Description 1</p>
-                <p>Donation Amount 1</p>
-                <!-- Donation Options -->
-                <input type="number" name="" id="" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" class="donation-card-input-button">
+                <img src="https://www.globalgiving.org/pfil/14868/ph_14868_51129.jpg" alt="Donation Card Image">
+                <h2>Plant 30,000 native trees Costa Rican owned farms</h2>
+                <p>Pay community men and women to plant 30,000 trees (65 species) in biological corridors covering water springs and rivers in Guabo Valley watershed near Pacific ocean. All farms owned by Costa Ricans. Build sustainable businesses like production of fertile soil, production of trees, sustainable eco-tourism and forest management practices promoting long term rainforest conservation. Combat climate change thru permanent capture 30,000 tons of CO2. Excess water vapor transpiration. Repair soils.</p>
+                <input type="number" name="" id="donation-amount-1" placeholder="Enter US Dollar amount" class="donation-card-input-number">
+                <input type="button" value="Add to Cart" id="add-to-cart-1" class="donation-card-input-button">
             </div>
             <!-- Card 2 -->
             <div class="donation-card">
-                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
-                <h2>Donation Card Title 2</h2>
-                <p>Donation Card Description 2</p>
-                <p>Donation Amount 2</p>
-                <!-- Donation Options -->
-                <input type="number" name="" id="" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" class="donation-card-input-button">
+                <img src="https://www.globalgiving.org/pfil/9790/pict_large.jpg" alt="Donation Card Image">
+                <h2>Purchase and Protect Forever Endangered Rainforest</h2>
+                <p>Rainforest Rescue's Daintree Purchase and Protect Forever Project purchases and protects high conservation value rainforest. Nature Refuge status is then created which protects the properties forever. Our vision is to buy back and protect all remaining high conservation value properties in the Daintree lowland rainforest while supporting rainforest buy back projects globally. Your support will enable us to protect the most rare and diverse tropical rainforest forever.</p>
+                <input type="number" name="" id="donation-amount-2" placeholder="Enter US Dollar amount" class="donation-card-input-number">
+                <input type="button" value="Add to Cart" id="add-to-cart-2" class="donation-card-input-button">
             </div>
             <!-- Card 3 -->
             <div class="donation-card">
-                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
-                <h2>Donation Card Title 3</h2>
-                <p>Donation Card Description 3</p>
-                <p>Donation Amount 3</p>
-                <!-- Donation Options -->
-                <input type="number" name="" id="" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" class="donation-card-input-button">
-            </div>
-            <!-- Card 4 -->
-            <div class="donation-card">
-                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
-                <h2>Donation Card Title 4</h2>
-                <p>Donation Card Description 4</p>
-                <p>Donation Amount 4</p>
-                <!-- Donation Options -->
-                <input type="number" name="" id="" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" class="donation-card-input-button">
-            </div>
-            <!-- Card 5 -->
-            <div class="donation-card">
-                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
-                <h2>Donation Card Title 5</h2>
-                <p>Donation Card Description 5</p>
-                <p>Donation Amount 5</p>
-                <!-- Donation Options -->
-                <input type="number" name="" id="" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" class="donation-card-input-button">
-            </div>
-            <!-- Card 6 -->
-            <div class="donation-card">
-                <img src="./imgs/shop/dummy-donation-card.jpg" alt="Donation Card Image">
-                <h2>Donation Card Title 6</h2>
-                <p>Donation Card Description 6</p>
-                <p>Donation Amount 6</p>
-                <!-- Donation Options -->
-                <input type="number" name="" id="" placeholder="Enter US Dollar amount" class="donation-card-input-number">
-                <input type="button" value="Add to Cart" class="donation-card-input-button">
+                <img src="https://www.globalgiving.org/pfil/10973/pict_large.jpg" alt="Donation Card Image">
+                <h2>Engaging with Congress on Climate Change Solutions</h2>
+                <p>EESI is a nonpartisan policy institution. It fills critical needs: turning complex concepts into accessible information, inviting decision-makers to ask questions, and finding solutions to climate change, an urgent threat. Help further equitable climate policy solutions that lead to economic, national security, public health, and environmental benefits. Give today so that the Congress--and the media--have access to compelling stories to move ahead on clean energy, climate, and resilience!</p>
+                <input type="number" name="" id="donation-amount-3" placeholder="Enter US Dollar amount" class="donation-card-input-number">
+                <input type="button" value="Add to Cart" id="add-to-cart-3" class="donation-card-input-button">
             </div>
         </section>
-        <!-- Order Summary -->
-        <section id="order-summary">
-            <!-- List of selected donation cards will go here -->
-        </section>
-        <!-- Checkout Summary -->
-        <section id="checkout-summary">
-            <!-- Checkout form will go here -->
+        <!-- Cart Window -->
+        <section id="cart-window" style="display: none;">
+            <!-- Order Summary -->
+            <section id="order-summary">
+                <!-- List of selected donation cards will go here -->
+            </section>
+            <!-- Checkout Summary -->
+            <section id="checkout-summary">
+                <!-- Checkout form will go here -->
+            </section>
         </section>
     </main>
     <footer>
