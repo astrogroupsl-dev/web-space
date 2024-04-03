@@ -36,19 +36,21 @@ function addToCart(title, amount) {
 // Function to select/deselect a donation
 function toggleDonationSelection(index) {
     cart[index].selected = !cart[index].selected;
-    updateCheckoutSummary(); // Update checkout summary after toggling selection
 }
 
 // Function to delete selected donations
 function deleteSelectedDonations() {
     cart = cart.filter(donation => !donation.selected);
-    updateCartDisplay(); // Update cart display after deleting donations
-    updateCheckoutSummary(); // Update checkout summary after deleting donations
 }
 
 // Function to checkout
 function checkout() {
-    let total = cart.reduce((acc, donation) => acc + (donation.selected ? donation.amount : 0), 0);
+    let total = 0;
+    cart.forEach(donation => {
+        if (donation.selected) {
+            total += donation.amount;
+        }
+    });
     if (total > 0) {
         alert('Proceeding to payment process...');
         // Proceed with the payment process here
