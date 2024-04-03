@@ -168,7 +168,7 @@ p {
 }
 .read-more-button {
     display: block;
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 10px;
     cursor: pointer;
     text-align: center;
 }
