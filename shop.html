@@ -18,7 +18,7 @@
         <!-- Donation Card Showcase -->
         <section id="donation-card-showcase">
             <!-- Card 1 -->
-            <div class="donation-card">
+            <div class="donation-card" id="donation-card-1">
                 <img src="https://www.globalgiving.org/pfil/14868/ph_14868_51129.jpg" alt="Donation Card Image">
                 <a  class="card-title" href="https://www.globalgiving.org/projects/plant-native-trees-community-save-rainforest-costa-rica/" target="_blank" rel="noopener noreferrer">
                     <h2>Plant 30,000 native trees Costa Rican owned farms</h2>
@@ -28,7 +28,7 @@
                 <input type="button" value="Add to Cart" id="add-to-cart-1" class="donation-card-input-button">
             </div>
             <!-- Card 2 -->
-            <div class="donation-card">
+            <div class="donation-card" id="donation-card-2">
                 <img src="https://www.globalgiving.org/pfil/9790/pict_large.jpg" alt="Donation Card Image">
                 <a class="card-title" href="https://www.globalgiving.org/projects/rescue-prime-australian-rainforest-from-developers/" target="_blank" rel="noopener noreferrer">
                     <h2>Purchase and Protect Forever Endangered Rainforest</h2>
@@ -38,7 +38,7 @@
                 <input type="button" value="Add to Cart" id="add-to-cart-2" class="donation-card-input-button">
             </div>
             <!-- Card 3 -->
-            <div class="donation-card">
+            <div class="donation-card" id="donation-card-3">
                 <img src="https://www.globalgiving.org/pfil/10973/pict_large.jpg" alt="Donation Card Image">
                 <a class="card-title" href="https://www.globalgiving.org/projects/climate-energy-education-new-congress/" target="_blank" rel="noopener noreferrer">
                     <h2>Engaging with Congress on Climate Change Solutions</h2>
@@ -48,17 +48,13 @@
                 <input type="button" value="Add to Cart" id="add-to-cart-3" class="donation-card-input-button">
             </div>
         </section>
-        <!-- Cart Window -->
-        <section id="cart-window" style="display: none;">
-            <!-- Order Summary -->
-            <section id="order-summary">
-                <!-- List of selected donation cards will go here -->
-            </section>
-            <!-- Checkout Summary -->
-            <section id="checkout-summary">
-                <!-- Checkout form will go here -->
-            </section>
-        </section>
+        <!-- Cart Container -->
+        <div id="cartContainer"">
+            <button id="toggleCart-button" onclick="toggleCart()">Show Cart</button>
+            <div id="cart">
+                <p>Cart Content</p>
+            </div>
+        </div>
     </main>
     <footer>
         <iframe class="footer-iframe" src="./footer.html" frameborder="0"></iframe>

@@ -75,6 +75,7 @@ main {
 .donation-card-input-button {
   background-color: #dc143c;
   border: none;
+  border-radius: 5px;
   color: #ffffff;
   padding: 10px 20px;
   text-align: center;
@@ -85,4 +86,33 @@ main {
 
 .donation-card-input-button:hover {
   background-color: #dc143c88;
+}
+
+#toggleCart-button {   background-color: #dc143c;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+
+/* Cart related Styles */
+#cartContainer {
+  background-color: #eee;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#cart {
+  display: none;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#cart.active {
+  display: block;
 }
