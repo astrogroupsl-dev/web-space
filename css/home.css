@@ -193,25 +193,3 @@ p {
     color: #AAAAAA;
     border-color: #222222;
 }
-
-/* footer {
-    text-align: center;
-    background-color: #343434;
-    color: #FFFFFF;
-    padding: 20px 0;
-} */
-
-.footer-nav a {
-    margin-left: 20px;
-    display: inline-block;
-    text-decoration: none;
-    color: aliceblue;
-}
-
-.footer-nav a:visited {
-    color: aliceblue; /* Set the color to the same color as before */
-}
-
-footer p {
-    margin-top: 40px;
-}
