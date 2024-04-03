@@ -42,8 +42,20 @@ main {
   height: auto;
 }
 
-.donation-card h2 {
+.card-title {
+  color: #eeeeee;
+  text-decoration: none;
   margin-top: 0;
+}
+
+.card-description {
+  color: #AAA;
+  text-indent: 5%;
+  text-align: justify;
+}
+
+.card-title:hover {
+  text-decoration: underline;
 }
 
 .donation-card p {
@@ -51,9 +63,8 @@ main {
 }
 
 .donation-card-input-number {
-  background-color: #0077ff;
-  border: none;
-  color: #ffffff;
+  border: solid 1px #333;
+  color: #000000;
   padding: 10px;
   text-align: center;
   display: inline-block;
