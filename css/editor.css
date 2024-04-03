@@ -1,7 +1,86 @@
-body main{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    margin-top: 128px;
-    padding: 0;
-  }
-  
+body {
+  background-color: #000000;
+  color: #ffffff; /* Set text color to white */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #ffffff;
+  padding-top: 0px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.container {
+  padding: 50px;
+  padding-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px; /* Increase margin-top for some space between header and boxes */
+}
+
+.box {
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Set background color to black with transparency */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Set box shadow with white color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+
+.box:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Darken background color on hover */
+}
+
+.box h2 {
+  margin-top: 0;
+}
+
+.box ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.box ul li {
+  margin-bottom: 5px;
+}
+
+.box a {
+  color: #32a2fd; /* Change link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.extended {
+  display: none;
+  position: fixed;
+  background-color: rgb(219, 247, 252);
+  color: #030202;
+  padding: 20px;
+  border: #000000;
+  border-radius: 10px;
+  width: 1000px;
+  max-height: 640px;
+  left: 15%;
+  transform: translateX(-50%);
+  top: 56%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.box:hover .extended {
+  display: block;
+}
+
+.extended p {
+  margin-top: 0;
+}
+
+.extended a {
+  color: #32a2fd; /* Change link color */
+  text-decoration: underline; /* Add underline to links */
+}
