@@ -1,5 +1,6 @@
 /* Page settings */
 body {
+  background-image: url("../imgs/shop/sdg_background_image.png");
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -21,14 +22,25 @@ main {
 
 .donation-card {
   border: 1px solid #ddd;
+  border-radius: 10px;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #eeeeee44;
+  backdrop-filter: blur(5px);
   flex-basis: calc(33.333% - 40px);
   box-sizing: border-box;
+  transition-duration: 0.25s;
+}
+
+.donation-card:hover {
+  background-color: #11111188;
+  backdrop-filter: blur(5px);
+  transition-duration: 0.25s;
 }
 
 .donation-card img {
+  border-radius: 5px;
   width: 100%;
   height: auto;
 }
