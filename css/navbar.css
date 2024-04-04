@@ -60,34 +60,11 @@ main {
     z-index: 100;
 }
 
-/* Icon Section */
-.home-link img,
-.content-link img,
-.feedback-link img,
-.gallery-link img,
-.shop-link img {
-    display: inline;
-    width: 20px;
-    height: auto;
-    margin-right: 10px;
-    transition: visibility 0.3s, transform 0.3s ease-in-out;
-}
-
 .profile-link img {
     width: 40px;
     height: auto;
     margin-top: -10px;
     transition: transform 0.3s ease;
-}
-
-.home-link:hover img,
-.content-link:hover img,
-.feedback-link:hover img,
-.gallery-link:hover img,
-.shop-link:hover img {
-    display: inline-block;
-    visibility: visible;
-    transform: scale(1.1) translateX(-10px);
 }
 
 .profile-link img:hover {
